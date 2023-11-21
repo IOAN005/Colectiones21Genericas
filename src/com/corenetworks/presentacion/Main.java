@@ -1,17 +1,28 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+package com.corenetworks.presentacion;
+
+import java.util.HashSet;
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Set<Integer> numeros=new HashSet<>();
+        numeros.add(9);
+        numeros.add(8);
+        numeros.add(7);
+        numeros.add(2);
+        numeros.add(6);
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println(numeros);
+        System.out.println("esta vacia ?" +numeros.isEmpty());
+        System.out.println("existe un 8 ->" +numeros.contains(8));
+        System.out.println("eliminamos el 2 ->" + numeros.remove(2));
+        System.out.println("conjunto " + numeros);
 
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        // Recorerla
+        for (Integer elementos:numeros
+             ) {
+            System.out.println(elementos.toString());
         }
+
     }
 }
